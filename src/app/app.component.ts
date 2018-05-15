@@ -15,8 +15,6 @@ export class MyApp {
 
   rootPage: any;
 
-  pages: Array<{ title: string, component: any }>;
-
   constructor(private storage: Storage, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
     storage.get('login').then((val) => {
@@ -35,11 +33,5 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
-  }
-
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
   }
 }

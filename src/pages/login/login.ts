@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
+import {HomePage} from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -17,5 +18,7 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-
+  continue() {
+    this.navCtrl.setRoot(HomePage);
+  }
 }
